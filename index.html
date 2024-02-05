@@ -20,8 +20,8 @@
             .then(response => response.json())
             .then(data => {
                 // Update HTML content with fetched data
-                document.getElementById('currentPrice').innerText = `Current Price: $${data.c}`;
-                document.getElementById('priceChange').innerText = `Price Change: $${data.d}`;
+                document.getElementById('currentPrice').innerText = `Current Price: $${data.'c'}`;
+                document.getElementById('priceChange').innerText = `Price Change: $${data.'d'}`;
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
