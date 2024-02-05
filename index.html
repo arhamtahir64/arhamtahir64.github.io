@@ -9,6 +9,8 @@
     <h1>Stock Data</h1>
     <p id="currentPrice">Current Price: Loading...</p>
     <p id="priceChange">Price Change: Loading...</p>
+    <p id="percentChange">Percent Change: Loading...</p>
+
 
     <script>
         // Fetch data from Finnhub API
@@ -22,6 +24,8 @@
                 // Update HTML content with fetched data
                 document.getElementById('currentPrice').innerText = `Current Price: $${data.c}`;
                 document.getElementById('priceChange').innerText = `Price Change: $${data.d}`;
+                document.getElementById('percentChange').innerText = `Price Change Percent: %${ data.dp}`;
+
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
